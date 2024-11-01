@@ -44,6 +44,78 @@
         </div>
     </section>
 
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCircuito - Descarte Sustentável de Eletrônicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Conteúdo existente do site aqui -->
+
+    <!-- Seção de Login -->
+    <section class="login-section" id="login-section" style="display: none;">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Seção de Agendamento -->
+    <section class="agendamento-section" id="agendamento-section" style="display: none;">
+        <div class="container">
+            <h2>Agendamento de Coleta</h2>
+            <form id="agendamentoForm">
+                <label for="data">Data:</label>
+                <input type="date" id="data" required>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" required>
+                <button type="submit">Agendar Coleta</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Exibir login ao clicar em "Agende uma Coleta"
+        document.querySelector('.hero-btn').addEventListener('click', function() {
+            document.getElementById('login-section').style.display = 'block';
+            document.getElementById('home').style.display = 'none';  // Oculta a seção principal
+        });
+
+        // Lógica de login e redirecionamento
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            if (email === "usuario@exemplo.com" && password === "senha123") {  // Exemplo simples de login
+                document.getElementById('login-section').style.display = 'none';
+                document.getElementById('agendamento-section').style.display = 'block';
+            } else {
+                alert("Credenciais inválidas!");
+            }
+        });
+
+        // Função de agendamento
+        document.getElementById('agendamentoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Coleta agendada com sucesso!");
+            // Lógica de envio ao servidor pode ser adicionada aqui
+        });
+    </script>
+</body>
+</html>
+
+
     <!-- Serviços -->
     <section class="services" id="services">
         <div class="container">
