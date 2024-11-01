@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d5540;
+    padding: 20px;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero {
+    background: linear-gradient(to right, #4caf50, #3e8e41);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-btn {
+    margin-top: 20px;
+    background-color: white;
+    color: #4caf50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.about, .services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #2d5540;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+'''
+
+# Paths for saving the files
+html_path = "/mnt/data/EcoCircuito_site.html"
+css_path = "/mnt/data/styles.css"
+
+# Saving the HTML file
+with open(html_path, "w") as html_file:
+    html_file.write(html_code)
+
+# Saving the CSS file
+with open(css_path, "w") as css_file:
+    css_file.write(css_code)
+
+html_path, css_path
