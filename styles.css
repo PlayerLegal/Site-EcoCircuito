@@ -24,7 +24,7 @@ body {
 }
 
 .logo img {
-    border-radius: 100px;
+    border-radius: 25px;
     position: absolute;
     width: 150px;
 }
